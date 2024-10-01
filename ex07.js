@@ -5,3 +5,20 @@
 
 console.log(validateEmail("test@example.com")); // Expected output: true
 console.log(validateEmail("invalid-email.com")); // Expected output: false
+
+function validateEmail(string){
+    if(string.includes('@')){
+        if(string.includes('.')){
+            if(string.indexOf('.')>string.indexOf('@')+1){
+                return true
+            }else{
+                return false
+            }
+        }else {
+            return false
+        }
+    }else {
+        return false
+    }
+
+}

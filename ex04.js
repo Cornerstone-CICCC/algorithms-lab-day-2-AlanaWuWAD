@@ -3,3 +3,26 @@
 // Example: mostFrequentChar("javascript") should return "a".
 
 console.log(mostFrequentChar("javascript")); // Expected output: "a"
+
+function mostFrequentChar(text){
+    let count={}
+    for(let i in text){
+        if (text[i] in count){
+            count[text[i]]++
+        }else {
+            count[text[i]] = 1
+        }
+    }
+    let numArray = Object.values(count)
+    let letterArray = Object.keys(count)
+    let max = 0
+    let letter =''
+    for(let i in numArray){
+        if(numArray[i]>max){
+            max = numArray[i]
+            letter = letterArray[i]
+        }
+    }
+    return `${letter} : ${max}`
+
+}

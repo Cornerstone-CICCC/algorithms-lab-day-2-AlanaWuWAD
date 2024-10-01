@@ -3,3 +3,13 @@
 // Example: arrayDifference([1, 2, 3], [2, 3, 4]) should return [1].
 
 console.log(arrayDifference([1, 2, 3], [2, 3, 4])); // Expected output: [1]
+
+function arrayDifference(arrayA, arrayB){
+    let num =[]
+    for(let i=0; i< arrayA.length; i++){
+        if(!arrayB.includes(arrayA[i])){
+            num.push(arrayA[i]) 
+        }
+    }
+    console.log(num)
+}
