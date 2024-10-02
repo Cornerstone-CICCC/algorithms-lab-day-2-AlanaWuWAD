@@ -7,25 +7,14 @@ console.log(groupByAge([{ name: "Alice", age: 25 }, { name: "Bob", age: 25 }, { 
 
 function groupByAge(students){
     let newObj = {}
+
     students.forEach(student => {
         if(newObj[student.age]){
+            
             newObj[student.age].push(student)
         }else{
             newObj[student.age] = [student]
         }
-        
     });
     return newObj
-
-    // for(let i in array){
-    //     console.log(array[i])
-    //     console.log(newObj.age)
-    //     if(newObj.age.includes(array[i].age)){
-    //         newObj = array[i]
-    //     }else {
-    //         newObj = array[i].age
-    //     }
-    //     // console.log(newObj)
-    //     // console.log(array[i].age)
-    // }
 }

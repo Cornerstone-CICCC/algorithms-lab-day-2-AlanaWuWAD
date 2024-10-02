@@ -4,3 +4,8 @@
 // Example: calculateBMI(70, 1.75) should return 22.86.
 
 console.log(calculateBMI(70, 1.75)); // Expected output: 22.86
+
+function calculateBMI(weight,height){
+    let BMI = weight/(height**2)
+    return BMI.toFixed(2)
+}

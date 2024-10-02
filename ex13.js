@@ -3,3 +3,7 @@
 // Example: sumRange(5) should return 15 (1 + 2 + 3 + 4 + 5).
 
 console.log(sumRange(5)); // Expected output: 15
+
+function sumRange(num){
+    return num <= 1 ? 1: num + sumRange(num-1)
+}

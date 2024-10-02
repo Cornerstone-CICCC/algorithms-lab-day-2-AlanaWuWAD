@@ -3,3 +3,14 @@
 // Example: countWordOccurrences("hello world hello", "hello") should return 2.
 
 console.log(countWordOccurrences("hello world hello", "hello")); // Expected output: 2
+
+function countWordOccurrences(string,word){
+    let arr = string.split(' ')
+    let num = 0
+    arr.forEach(element => {
+        if(element.includes(word)){
+            num++
+        }
+    })
+    return num
+}
