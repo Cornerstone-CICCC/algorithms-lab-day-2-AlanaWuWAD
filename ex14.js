@@ -6,3 +6,16 @@ const cart = createCart();
 cart.addItem("apple");
 cart.addItem("banana");
 console.log(cart.getItems()); // Expected output: ["apple", "banana"]
+
+function createCart(){
+    let arr = []
+    return {
+        addItem: function (item){
+            return arr.push(item)
+        },
+        getItems: function(){
+            return arr
+        }
+    } 
+
+};

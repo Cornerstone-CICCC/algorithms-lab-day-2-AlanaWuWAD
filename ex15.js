@@ -3,3 +3,8 @@
 // Example: findMax([3, 1, 4, 1, 5, 9]) should return 9.
 
 console.log(findMax([3, 1, 4, 1, 5, 9])); // Expected output: 9
+
+function findMax (array){
+    let orderArr = array.sort((a,b)=>a-b)
+    return orderArr.at(-1)
+}
